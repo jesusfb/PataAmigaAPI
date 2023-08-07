@@ -1,7 +1,6 @@
 FROM maven:3.9 AS builder
 WORKDIR /app
 COPY . .
-RUN mvn clean package -Dmaven.test.skip=true
 
 FROM amazoncorretto:17-alpine
 MAINTAINER JesusFigueroa
